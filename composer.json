@@ -1,0 +1,20 @@
+{
+    "name": "alexsmith42/sitemap",
+    "description": "Sitemap parser",
+    "keywords": ["sitemap", "composer", "package"],
+    "authors": [
+        {
+            "name": "Alex Smith",
+            "email": "avalk87@gmail.com"
+        }
+    ],
+    "type": "project",
+    "require": {
+		"php": ">=7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "AlexSmith\\SitemapParser\\": "src/"
+        }
+    }
+}
