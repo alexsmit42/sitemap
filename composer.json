@@ -2,6 +2,7 @@
     "name": "alexsmith42/sitemap",
     "description": "Sitemap parser",
     "keywords": ["sitemap", "composer", "package"],
+    "homepage": "https://github.com/alexsmith42/sitemap",
     "authors": [
         {
             "name": "Alex Smith",
