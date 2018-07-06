@@ -3,6 +3,7 @@
     "description": "Sitemap parser",
     "keywords": ["sitemap", "composer", "package"],
     "homepage": "https://github.com/alexsmith42/sitemap",
+    "license": "MIT",
     "authors": [
         {
             "name": "Alex Smith",
