@@ -23,13 +23,26 @@ class SitemapParser {
         $data = file_get_contents($file);
         $xml = new SimpleXMLElement($data);
 
+        $website = '';
         $pages = [];
         foreach ($xml->url as $url) {
-            if ($url->loc) {
-                $pages[] = $url->loc->__toString();
+            if (!$url->loc) {
+                continue;
+            }
+
+            $urlArray = parse_url($url->loc->__toString());
+
+            $pageUrl = $urlArray['path'];
+            if (isset($urlArray['query'])) {
+                $pageUrl .= '?'.$urlArray['query'];
+            }
+            $pages[] = $pageUrl;
+
+            if (!$website) {
+                $website = $urlArray['host'];
             }
         }
 
-        return $pages;
+        return ['website' => $website, 'pages' => $pages];
     }
 }
